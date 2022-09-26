@@ -19,8 +19,8 @@ spring:
 #          uri: https://github.com/fineman999/spring-cloud-config
           default-label: main
           uri: https://github.com/Nanum-BE/Config.git
-#          username:
-#          password:
+          username: fineman999
+          password: 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
 
 management:
   endpoints:
