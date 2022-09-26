@@ -1,0 +1,29 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-service
+#  profiles:
+#    active: native
+  rabbitmq:
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    config:
+      server:
+#        native:
+#          search-locations: file:///C:\spring_cloud\native-file-repo
+        git:
+#          uri: file:///C:\spring_cloud\config
+#          uri: https://github.com/fineman999/spring-cloud-config
+          default-label: main
+          uri: https://github.com/Nanum-BE/Config.git
+#          username:
+#          password:
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, busrefresh
